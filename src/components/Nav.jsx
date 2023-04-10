@@ -6,14 +6,8 @@ const Nav = ({ onSearch }) => {
     return (
         <nav>
             <SearchBar onSearch={onSearch}/>
-
-            <button>
-                <Link to='/about' >ABOUT</Link>
-            </button>
-
-            <button>
-                <Link to='/home' >HOME</Link>
-            </button>
+            <Link to='/about' ><button>About</button></Link>
+            <Link to='/home' ><button>Home</button></Link>
         </nav>
     )
 }
