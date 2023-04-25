@@ -9,9 +9,6 @@ import Favorites from './components/Favorites';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-const URL_BASE = 'https://be-a-rym.up.railway.app/api/character';
-const API_KEY = '95383a07e06f.4e276d92a5540b94fe23';
-
 function App() {
 
    const navigate = useNavigate();
@@ -36,7 +33,7 @@ function App() {
    }, [access]);
 
    const onSearch = (id) => {
-      axios(`${URL_BASE}/${id}?key=${API_KEY}`)
+      axios(`http://localhost:3002/rickandmorty/character/${id}`)
       .then(({ data }) => {
          if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
