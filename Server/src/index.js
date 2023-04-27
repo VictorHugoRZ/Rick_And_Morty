@@ -11,4 +11,4 @@ http
         getCharById(res, +id);
     }
 })
-.listen(3002, 'localhost')
+.listen(3002)
